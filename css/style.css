@@ -6,6 +6,10 @@
  * Made By MaterializeCSS.com
  */
 
+body {
+  font-family: 'Prompt', sans-serif;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
