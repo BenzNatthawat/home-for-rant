@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="สุชัยห้องให้เช่าไม้ขาวภูเก็ต บ้านเช่าภูเก็ตไม้ขาวใกล้สนามบินภูเก็ต และหน้าหาดไม้ขาว แหล่งชุมชน ห้องพร้อมอยู่มีแอร์ทีวีตู้เย็นเตียงนอน ทุกอย่างพร้อม ห้องเช่าราคาถูก" />
-  <meta name="keywords" content="seo,seo thai,seo blog,seo tools" />
+  <meta name="keywords"
+    content="ห้องให้เช่า,บ้านให้เช่า,ห้องเช่า,บ้านเช่า,ห้องเช่าไม้ขาวภูเก็ต,บ้านเช่าไม้ขาวภูเก็ต,ห้องเช่าราคาถูกไม้ขาว,ห้องเช่าภูเก็ต,หอพักใกล้สนามบิน" />
   <meta http-equiv="content-language" content="th" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="revisit-after" content="7 days" />
@@ -80,15 +81,15 @@
 
   <div class="m-p-g">
     <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
-      <img src="./images/1.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/2.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/3.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/4.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/5.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/6.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/7.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/8.jpg" class="m-p-g__thumbs-img" />
-      <img src="./images/9.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/1.jpg" data-full="./images/1.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/2.jpg" data-full="./images/2.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/3.jpg" data-full="./images/3.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/4.jpg" data-full="./images/4.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/5.jpg" data-full="./images/5.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/6.jpg" data-full="./images/6.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/7.jpg" data-full="./images/7.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/8.jpg" data-full="./images/8.jpg" class="m-p-g__thumbs-img" />
+      <img src="./images/9.jpg" data-full="./images/9.jpg" class="m-p-g__thumbs-img" />
     </div>
 
     <div class="m-p-g__fullscreen"></div>
@@ -98,7 +99,7 @@
     <div class="section">
 
       <!--   Icon Section   -->
-      <div class="row">
+      <div class="row text-center">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">my_location</i></h2>
@@ -131,7 +132,7 @@
       </div>
 
       <!--   Icon Section   -->
-      <div class="row center-icon-block">
+      <div class="row text-center center-icon-block">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">videocam</i></h2>
@@ -190,13 +191,13 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright text-center">
       <div class="container">
-        create by.<a class="brown-text text-lighten-3" href="http://creator-webapp.com">creator-webapp</a>
+        Site by <a class="brown-text text-lighten-3" href="http://creator-webapp.com">creator-webapp</a>
       </div>
     </div>
   </footer>
-
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./js/material-photo-gallery.js"></script>
@@ -204,9 +205,22 @@
   <script src="./js/init.js"></script>
   <script>
     var elem = document.querySelector('.m-p-g');
-
     document.addEventListener('DOMContentLoaded', function () {
       var gallery = new MaterialPhotoGallery(elem);
+    });
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        console.log($(this).scrollTop())
+        if ($(this).scrollTop() > 100) {
+          $('#scroll').fadeIn();
+        } else {
+          $('#scroll').fadeOut();
+        }
+      });
+      $('#scroll').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
     });
   </script>
 </body>
