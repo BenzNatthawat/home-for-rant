@@ -91,6 +91,8 @@ footer.page-footer {
 
 .text-theme {
   color: #f17236;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #ffffff;
 }
 
 .footer-info {
@@ -137,4 +139,8 @@ p {
   opacity: 1;
   filter: "alpha(opacity=100)";
   -ms-filter: "alpha(opacity=100)";
+}
+
+.img-map {
+  width: 100%;
 }
